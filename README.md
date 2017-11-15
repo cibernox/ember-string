@@ -1,52 +1,51 @@
-# @ember/string
+@ember/string
+==============================================================================
 
-This Ember addon contains utility functions to deal with `String`s.
+[Short description of the addon.]
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
-* `ember install @ember/string`
-
-## Usage
-
-The following exports are available:
-
-```javascript
-import {
-  camelize,
-  capitalize,
-  classify,
-  dasherize,
-  decamelize,
-  underscore,
-  w,
-  fmt,
-  loc
-} from '@ember/string';
+```
+ember install my-addon
 ```
 
-### `camelize`, `capitalize`, `classify`, `dasherize`, `decamelize`, `underscore`
 
-These methods transform a string, for example:
+Usage
+------------------------------------------------------------------------------
 
-```javascript
-import { camelize } from '@ember/string';
+[Longer description of how to use the addon in apps.]
 
-camelize("my class") // MyClass
-```
 
-Consult the tests of the respective function to see the behaviour in more detail.
+Contributing
+------------------------------------------------------------------------------
 
-### `w`
+### Installation
 
-This utility function takes a string, splits it on spaces, and returns an array with the elements.
+* `git clone <repository-url>`
+* `cd my-addon`
+* `npm install`
 
-```javascript
-import { w } from '@ember/string';
+### Linting
 
-w("my array of   strings") // ["my", "array", "of", "strings"]
-```
+* `npm run lint:hbs`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
-### `fmt`, `loc`
+### Running tests
 
-These methods are deprecated and only included to ease the transition from the `Ember.String` namespace.
-See [DEPRECATIONS.md](DEPRECATIONS.md) for more details on how to resolve the deprecations.
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
+
+### Running the dummy application
+
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
