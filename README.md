@@ -1,26 +1,52 @@
 # @ember/string
 
-This README outlines the details of collaborating on this Ember addon.
+This Ember addon contains utility functions to deal with `String`s.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd @ember/string`
-* `yarn install`
+* `ember install @ember/string`
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+The following exports are available:
 
-## Running Tests
+```javascript
+import {
+  camelize,
+  capitalize,
+  classify,
+  dasherize,
+  decamelize,
+  underscore,
+  w,
+  fmt,
+  loc
+} from '@ember/string';
+```
 
-* `yarn test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+### `camelize`, `capitalize`, `classify`, `dasherize`, `decamelize`, `underscore`
 
-## Building
+These methods transform a string, for example:
 
-* `ember build`
+```javascript
+import { camelize } from '@ember/string';
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+camelize("my class") // MyClass
+```
+
+Consult the tests of the respective function to see the behaviour in more detail.
+
+### `w`
+
+This utility function takes a string, splits it on spaces, and returns an array with the elements.
+
+```javascript
+import { w } from '@ember/string';
+
+w("my array of   strings") // ["my", "array", "of", "strings"]
+```
+
+### `fmt`, `loc`
+
+These methods are deprecated and only included to ease the transition from the `Ember.String` namespace.
+See [DEPRECATIONS.md](DEPRECATIONS.md) for more details on how to resolve the deprecations.
